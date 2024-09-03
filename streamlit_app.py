@@ -36,7 +36,8 @@ if ingredients_list:
     #create counter X, for each row / X in...
     for x in ingredients_list:
         ingredients_string += x + ' '
-        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+        st.subheader(x + 'Nutrition Information')
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon" + x)
         #st.text(fruityvice_response.json())
         fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
     #st.write(ingredients_string)
