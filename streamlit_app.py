@@ -1,8 +1,8 @@
 # Import python packages
 import streamlit as st
 # from snowflake.snowpark.context import get_active_session
-import requests
 from snowflake.snowpark.functions import col
+import requests
 
 # Write directly to the app
 st.title("Tim is the best :white_check_mark:")
